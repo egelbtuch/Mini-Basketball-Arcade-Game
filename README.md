@@ -42,4 +42,4 @@ This link helped me setup the ESP32 for Bluetooth communication [here](https://w
 It seemed like the capacitive sensors were causing a bunch of problems with the electronics that were in close proximity to them and even the Bluetooth connection (but I am not 100% sure). So I tried to steer those two wires away from the others as best as I could.
 
 # Video
-A video of my work can be found [here](https://www.youtube.com/watch?v=FdYzZxUisu8).
+A video of my work can be found [here](https://www.youtube.com/watch?v=fLeUoNfXLaA).
