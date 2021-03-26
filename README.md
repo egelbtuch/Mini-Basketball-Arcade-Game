@@ -24,7 +24,11 @@
 * Krazy Glue
 
 # What does it do?
-The candle-fireplace system turns "on" when the light in its environment drops below a specified threshold value. When the system turns "on" a few things will happen immediately. The candle's light will begin to flicker, a music playlist will start playing on the Raspberry Pi and a video of a fireplace will begin playing on the display. While, the system is "on" the ESP32 will check for a double tap/touch on the left aluminum foil side wall and for a press and hold on the right aluminum foil side wall. A double tap/touch will result in the Raspberry Pi changing the song to the next one in the playlist. While, a press and hold will change the volume of the music playing on the Raspberry Pi. If the light in the system's environment becomes larger than the threshold value everything will immediately shutoff and the display will go black. The system can be turned on and off continuously due to changes in light.
+The basketball hoop system does a few things:
+
+* The ESP32 controls the "conveyer belt system" which moves the hoop left and right. The hoop does not start moving until the ESP32 (connected to local WIFI) reads "true" from our class web-server/API. Once the ESP32 reads "true" the motors will start moving left and right in a loop until the ESP32 is shutoff or reset. If reset the ESP32 will again look for a "true" string on the web-server/API.
+* One of the Arduino Unos controls the servo motor system which controls the ball shooting system. Once the Arduino is powered on it will continuously read the analog values coming from the potentiometer and move the servo accordingly.
+* The second Arduino Uno controls the scoreboard system. Once the Arduino is powered on it will set the scoreboard to all zeros. It will then add 1 to the scoreboard every time the ball goes through the hoop (hitting a piece of cardboard that is covering the photoresistor). To reset the scoreboard to zeros the user needs to flip the SPDT switch behind the hoop(functioning as a flip flop switch).
 
 # Project Overview
 The project consisted of two scripts that allowed for serial Bluetooth communication between the Raspberry Pi and the ESP32:
