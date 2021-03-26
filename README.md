@@ -1,4 +1,4 @@
-# Mini Basketball Arcade Game
+# Mini Arcade Basketball Hoop
 # Materials
 * 2 Arduino Unos
 * ESP32-Wrover-Dev
